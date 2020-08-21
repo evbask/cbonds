@@ -70,16 +70,14 @@
      methods: {
          fetchProducts(page_url, name){
              let vm = this;
-            
-            
-                page_url = page_url || '/api/products';
+
+             page_url = page_url || '/api/products';
            
 
-                if(name != null && name != ''){
-                    page_url = 'api/products/search/'+name;
-                }
+             if(name != null && name != ''){
+                 page_url = 'api/products/search/'+name;
+             }
             
-
              fetch(page_url)
                 .then(res => res.json())
                 .then(res => {
